@@ -24,7 +24,7 @@ pip install poetry
 ## 3. 依存関係のインストール
 
 ```shell
-poetry install
+poetry install --no-root
 ```
 
 これにより、以下の依存パッケージがインストールされます：

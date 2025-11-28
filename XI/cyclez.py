@@ -12,9 +12,12 @@ from common.gromacs2 import read_gro
 import numpy as np
 from pairlist import pairs_iter
 import matplotlib.pyplot as plt
+import sys
 
-
-gro_file = "00400.40.gro"
+if len(sys.argv) > 1:
+    gro_file = sys.argv[1]
+else:
+    gro_file = "00400.40.gro"
 
 with open(gro_file, "r") as f:
     for frame in read_gro(f):
@@ -110,10 +113,6 @@ with open(gro_file, "r") as f:
             center = cycles.centerOfMass(ring.path, rel_O) @ cell
             bin = int(center[2] / bin_width)
             zbins[bin][ring.code] += 1
-
-        for i, bin in enumerate(zbins):
-            for code in bin:
-                print(code, bin[code])
 
         # 各binの合計を計算して比率に変換
         codes = [0, 1, 3, 5, 7, 9, 11, 21]
