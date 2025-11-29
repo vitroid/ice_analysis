@@ -3,7 +3,7 @@
 ## 1. リポジトリのクローン
 
 ```shell
-git clone <repository-url>
+git clone https://github.com/vitroid/ice_analysis
 cd XI
 ```
 
