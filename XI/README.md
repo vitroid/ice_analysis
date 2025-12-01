@@ -1,3 +1,5 @@
+水素結合の秩序を解析します。
+
 # セットアップ手順
 
 ## 1. リポジトリのクローン
@@ -42,6 +44,10 @@ poetry install --no-root
 
 ## 5. 実行
 
+### cyclez
+
+zスライスごとに、6員環のリングラベルの統計をとります。
+
 ```shell
 poetry run python cyclez.py
 ```
@@ -50,3 +56,11 @@ poetry run python cyclez.py
 
 - `cycles.pdf` / `cycles.png`: サイクルサイズ別の比率グラフ
 - `rings.pdf` / `rings.png`: リングコード別の比率グラフ
+
+### cycle_dipole
+
+6員環の実効双極子の向きをyaplotで表示します。
+
+### grid_dipole
+
+グリッドごとの実効双極子の向きをyaplotで表示します。
